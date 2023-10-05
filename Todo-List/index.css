@@ -1,0 +1,104 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700&display=swap');
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    outline: none;
+    border: none;
+    text-decoration: none;
+}
+body{
+    max-width: 1280px;
+    width: 100%;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height:100vh;
+    flex-direction: column;
+    font-family: 'Open Sans', sans-serif;
+}
+h1{
+    font-size: 35px;
+    color: rgb(49, 49, 51);
+    letter-spacing: 1px;
+    text-transform: capitalize;
+    font-weight: 600;
+}
+.todo-list {
+    margin: 1em 0 0 0 ;
+    width: 600px;
+    padding: 25px 20px 15px;
+    border-radius: 10px;
+    background: rgb(209, 201, 201);
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
+.todo-list .form{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0 10px;
+} 
+.todo-list .form input{
+    border: 1px solid black;
+    border-radius: 5px;
+    width:80%;
+    padding: 10px 10px;
+}
+.todo-list .form input::placeholder,.todo-list .form input[type = "text"]{
+    font-size: 14px;
+    font-weight: 400;
+    letter-spacing: 1px;
+    color: black;  
+}
+.todo-list .form button{
+    padding: 9px 0;
+    width: 20%;
+    border-radius: 5px;
+    background: black;
+    color: white;
+    font-size: 16px;
+    font-weight: 400;
+    letter-spacing: 1px;
+    cursor: pointer;
+    opacity: .6;
+}
+.todo-list .form .add-list.active{
+    opacity: 1;
+}
+.tasks{
+    padding: 20px 0 0;
+}
+.tasks .items{
+    display: flex;
+    background: white;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px, rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;
+    border-radius: 5px;
+    padding: 10px;
+    align-items: center;
+    justify-content: flex-end;
+    margin-bottom: 25px;
+    width: 100%;
+}
+.tasks .items p{
+    margin-right: auto;
+    font-size: 16px;
+    font-weight: 500;
+    color: rgb(52, 51, 51);
+    letter-spacing: 1px;
+}
+.tasks .items .items-btn {
+    display: flex;
+    column-gap: 15px;
+}
+.tasks .items .items-btn i{
+    font-size: 1.2em;
+    cursor: pointer;
+}
+.tasks .items.check{
+    background: rgb(15, 208, 15);
+    transform: translateY(5px) scale(1.02);
+}
+.tasks .items.check p,.tasks .items.check .items-btn i{
+    color: white;
+}

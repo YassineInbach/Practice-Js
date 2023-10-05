@@ -1,0 +1,84 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700&display=swap');
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    outline: none;
+    border: none;
+    text-decoration: none;
+    list-style: none;
+}
+body{
+    max-width: 1280px;
+    margin: 0 auto;
+    font-family: 'Open Sans', sans-serif;
+}
+nav{
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    padding: 1em 5em;
+    width: 100%;
+}
+.nav{
+background: rgb(233, 233, 239);
+}
+nav > h4{
+    margin-right: auto;
+    color: blue;
+    font-size: 30px;
+    font-weight: 600;
+    letter-spacing: 1px;
+}
+nav ul{
+    display: flex;
+    column-gap: 13em;
+    padding-right: 10em;
+}
+nav ul li a{
+    position: relative;
+    font-size: 16px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    color: black;
+}
+nav ul li a::after{
+    content: "";
+position: absolute;
+background: blue;
+left: 0;
+width: 0;
+height: 3px;
+bottom: -5px;
+transition: 1s ease;
+}
+nav ul li a:hover:after{
+    width: 100%;
+}
+nav ul li a:hover{
+    color: blue;
+}
+.container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    height: 88vh;
+    gap: 1.5em 0;
+}
+.container h1{
+    font-size: 45px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    text-transform: capitalize;
+}
+.container .btn button{
+padding: 10px 25px;
+font-size: 16px;
+font-weight: 600;
+background: local;
+border-radius: 10px;
+border: 2px solid blue;
+cursor: pointer;
+}

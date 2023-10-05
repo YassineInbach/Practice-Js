@@ -1,0 +1,149 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700&display=swap");
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  outline: none;
+  border: none;
+  list-style: none;
+  text-decoration: none;
+}
+
+body {
+  max-width: 1280px;
+  width: 100%;
+  margin: 0 auto;
+  font-family: "Open Sans", sans-serif;
+  background: #e5e5e5;
+}
+
+.container-box {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  margin: 1em 5em;
+}
+
+.container-box .box {
+  text-align: center;
+  max-width: 650px;
+}
+
+.container-box .box h1 {
+  font-weight: 700;
+  letter-spacing: 1.2px;
+  padding-bottom: 10px;
+}
+
+.container-box .box p {
+  font-size: 15px;
+  color: grey;
+  font-weight: 400;
+  line-height: 22px;
+}
+
+.container-box .list {
+  display: flex;
+  align-items: center;
+  column-gap: 3em;
+  padding: 2em 0;
+}
+
+.container-box .list li {
+  position: relative;
+  font-size: 15px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  text-transform: capitalize;
+  cursor: pointer;
+}
+
+.container-box .list li.active {
+  color: grey;
+}
+
+.container-box .list li::after {
+  position: absolute;
+  content: "";
+  left: 50%;
+  background: grey;
+  height: 2px;
+  width: 0%;
+  transition: 1s ease-in-out;
+  bottom: -5px;
+}
+
+.container-box .list li:hover:after {
+  left: 0;
+  width: 100%;
+}
+
+.container-box .groups {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  width: 100%;
+  gap: 1em;
+}
+
+@keyframes animation {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+.container-box .groups .group {
+  display: flex;
+  align-items: center;
+  gap: 0 1em;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 0px 5px 0px,
+    rgba(0, 0, 0, 0.1) 0px 0px 1px 0px;
+  padding: 10px 1em;
+  background: white;
+  border-radius: 5px;
+  width: 32%;
+  animation: animation 3s ease;
+}
+
+.container-box .groups .group img {
+  width: 120px;
+  height: 110px;
+  object-fit: cover;
+}
+
+.container-box .groups .group .text h3 {
+  font-weight: 600;
+  letter-spacing: 1px;
+  text-transform: capitalize;
+}
+
+.container-box .groups .group .text hr {
+  background: grey;
+  width: 50px;
+  height: 2px;
+  margin-bottom: 5px;
+}
+
+.container-box .groups .group .text p:nth-child(3) {
+  font-size: 15px;
+  font-weight: 700;
+  letter-spacing: 1px;
+}
+
+.container-box .groups .group .text .stars i {
+  color: rgb(209, 179, 7);
+  padding-bottom: 5px;
+}
+
+.container-box .groups .group .text p:nth-child(5) {
+  font-size: 14px;
+  letter-spacing: 1px;
+  font-weight: 700;
+}

@@ -1,0 +1,81 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700&display=swap');
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    outline: none;
+    border: none;
+    text-decoration: none;
+    list-style: none;
+    background: local;
+}
+body{
+    max-width: 1280px;
+    margin: 0 auto;
+    width: 100%;
+    font-family: 'Open Sans', sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+.groups{
+    position: relative;
+    width: 700px;
+    box-shadow: grey 0px 4px 12px;
+    background: white;
+    padding: 3em 4em;
+    border-radius: 1em;
+}
+.groups .btns-box{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 3px solid grey;
+    padding-bottom: 10px;
+}
+.groups .btns-box button{
+    font-size: 18px;
+    font-weight: 700;
+    color: black;
+    letter-spacing: 1px;
+}
+
+.groups .container-content {
+    padding: 2em 0;
+}
+.groups .container-content .content h2{
+    font-size: 25px;
+    text-transform: capitalize;
+    letter-spacing: 1.2px;
+    padding-bottom: 5px;
+    color:rgb(6, 46, 246) ;
+}
+.groups .container-content .content p{
+    font-size: 15px;
+    line-height: 25px;
+    font-weight: 400;
+    color: grey;
+}
+.groups .container-content .content{
+    display: none;
+}
+.groups .btns-box button.active {
+    color: rgb(6, 46, 246);
+}
+.groups .line{
+    position: absolute;
+    top: 78px;
+    left: 64px;
+    background: rgb(6, 46, 246);
+    height: 4px;
+border-radius: 5px;
+display: none;
+transition: all .4s ease;
+}
+.groups .line.line{
+    display: block;
+}
+.groups .container-content .content.active{
+    display: block;
+}

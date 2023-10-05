@@ -1,0 +1,633 @@
+@import "./reset.css";
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700&family=Roboto:wght@300;400;500;700;900&display=swap");
+
+:root {
+  --text-color: #000000;
+  --bg-color: #e5e5e5;
+  --main-color: #f29494;
+  --second-color: #ffffff;
+  --beige : beige;
+  --text-font: 15px;
+}
+
+*::selection {
+  color: var(--second-color);
+  background: var(--text-color);
+}
+
+body.dark {
+  --text-color: #ffffff;
+  --bg-color: #08162a;
+  --second-color: #2b3544;
+  --beige : black; 
+}
+
+body {
+  max-width: 1280px;
+  width: 100%;
+  margin: 0 auto;
+  font-family: "Open Sans", sans-serif;
+  background: var(--bg-color);
+  padding: 1em 2em 0;
+}
+
+
+
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+header .logo {
+  display: flex;
+  align-items: center;
+  column-gap: 10px;
+}
+
+header .logo i {
+  color: var(--main-color);
+  font-size: 1.3em;
+}
+
+header .logo h1 {
+  font-size: 30px;
+  font-weight: 600;
+  color: var(--text-color);
+  letter-spacing: 1px;
+}
+
+header .menu-bar .nav-links {
+  display: flex;
+  align-items: center;
+  column-gap: 35px;
+}
+
+header .menu-bar .nav-links li a {
+  position: relative;
+  font-size: 17px;
+  letter-spacing: 1px;
+  color: var(--text-color);
+  font-weight: 700;
+}
+
+header .menu-bar .nav-links li a:after {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 3px;
+  background: var(--main-color);
+  left: 0;
+  bottom: -7px;
+  transition: 0.4s ease;
+}
+
+header .menu-bar .nav-links li a:hover:after {
+  width: 100%;
+}
+
+header .menu-bar .nav-links li a:hover {
+  color: var(--main-color);
+}
+
+header .menu-bar .nav-links li:nth-child(1) a {
+  color: var(--main-color);
+}
+
+header .btn {
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+
+header .btn button {
+  cursor: pointer;
+}
+
+header .btn button:nth-child(1) {
+  padding: 10px 15px;
+  background: var(--main-color);
+  border-radius: 8px;
+  font-size: 15px;
+  letter-spacing: 1px;
+  font-weight: 500;
+  color: var(--second-color);
+}
+
+header button {
+  font-size: 1.8em;
+  color: var(--text-color);
+  cursor: pointer;
+}
+
+header .btn button:nth-child(2) {
+  display: none;
+}
+
+.container {
+  display: flex;
+  align-items: center;
+  column-gap: 1em;
+  justify-content: space-between;
+}
+
+.container .content {
+  max-width: 430px;
+}
+
+.container .content h1 {
+  font-size: 3em;
+  font-weight: 700;
+  font-family: "Roboto", sans-serif;
+  letter-spacing: 5px;
+  color: var(--text-color);
+  padding-bottom: 5px;
+}
+
+.container .content h1 span {
+  color: var(--main-color);
+}
+
+.container .content h3 {
+  font-size: 23px;
+  font-weight: 500;
+  letter-spacing: 3px;
+  color: var(--main-color);
+  text-transform: uppercase;
+  padding-bottom: 10px;
+}
+
+.container .content p {
+  font-size: var(--text-font);
+  color: var(--text-color);
+  font-weight: 400;
+  line-height: 24px;
+}
+
+.container .groups-cards {
+  display: flex;
+  align-items: center;
+  column-gap: 1em;
+  padding-top: 3em;
+}
+
+.container .groups-cards .cards {
+  text-align: center;
+  background: var(--second-color);
+  box-shadow: var(--main-color) 3px 4px 8px;
+  padding: 1em;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.container .groups-cards .cards:hover {
+  transform: scale(1.1);
+}
+
+.container .groups-cards .cards h2 {
+  font-size: 20px;
+  font-weight: 700;
+  font-family: "Roboto", sans-serif;
+  letter-spacing: 1.5px;
+  color: var(--text-color);
+  padding-bottom: 5px;
+}
+
+.container .groups-cards .cards p {
+  font-size: var(--text-font);
+  font-weight: 500;
+  letter-spacing: 2.5px;
+  color: var(--main-color);
+  text-transform: uppercase;
+}
+
+.container .groups-cards .cards img {
+  width: 120px;
+  height: 120px;
+}
+
+.container  img{
+  width: 550px;
+} 
+.made-width {
+  font-family: "Roboto", sans-serif;
+}
+
+.made-with p {
+  text-align: center;
+  font-size: var(--text-font);
+  color: var(--text-color);
+  font-weight: 500;
+}
+
+.made-with p span {
+  color: var(--main-color);
+  font-weight: 700;
+  letter-spacing: 1px;
+}
+
+/********************************************************media query***************************************************/
+@media screen and (max-width: 320px) {
+  body {
+    padding: 1em 1em 0;
+  }
+
+  header .logo i {
+    font-size: 1.2em;
+  }
+
+  header .logo h1 {
+    font-size: 20px;
+  }
+
+  header .btn button:nth-child(1) {
+    display: none;
+  }
+
+  header .menu-bar {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100vh;
+    display: none;
+    justify-content: center;
+    align-items: center;
+  }
+  header .menu-bar.active{
+    display: inherit;
+    background: var(--beige);
+  }
+  header .menu-bar .nav-links {
+    flex-direction: column;
+    gap: 2em 0;
+  }
+
+  header .menu-bar .nav-links li a {
+    font-size: 13px;
+  }
+
+  header button {
+    font-size: 1.2em;
+  }
+
+  header .btn button:nth-child(2) {
+    display: block;
+    font-size: 1.2em;
+  }
+
+  .container {
+    flex-direction: column-reverse;
+    column-gap: 0;
+  }
+
+  .container img {
+    width: 55%;
+  }
+
+  .container .content {
+    max-width: max-content;
+  }
+
+  .container .content h1 {
+    font-size: 1.2em;
+    letter-spacing: 3px;
+  }
+
+  .container .content h3 {
+    font-size: 11px;
+    letter-spacing: 2px;
+    padding-bottom: 5px;
+  }
+
+  .container .content p {
+    font-size: 11px;
+    line-height: 16px;
+  }
+
+  .container .groups-cards {
+    justify-content: space-evenly;
+    column-gap: 0;
+    padding-top: 1.5em;
+    gap: 2em 1em;
+    flex-wrap: wrap;
+  }
+
+  .container .groups-cards .cards {
+    flex: 1 1 auto;
+  }
+
+  .container .groups-cards .cards h2 {
+    font-size: 14px;
+  }
+
+  .container .groups-cards .cards p {
+    font-size: 12px;
+  }
+
+  .container .groups-cards .cards img {
+    width: 80px;
+  }
+
+  .made-with {
+    padding: 1em 0;
+  }
+
+  .made-with p {
+    font-size: 12px;
+    line-height: 18px;
+  }
+}
+
+@media screen and (min-width: 320px) and (max-width: 480px) {
+  body {
+    padding: 1em 1em 0;
+  }
+
+  header .logo i {
+    font-size: 1.3em;
+  }
+
+  header .logo h1 {
+    font-size: 25px;
+  }
+
+  header .btn button:nth-child(1) {
+    display: none;
+  }
+
+  header .menu-bar {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100vh;
+    display: none;
+    justify-content: center;
+    align-items: center;
+  }
+  header .menu-bar.active{
+    display: inherit;
+    background: var(--beige);
+  }
+  header .menu-bar .nav-links {
+    flex-direction: column;
+    gap: 2em 0;
+  }
+
+  header .menu-bar .nav-links li a {
+    font-size: 14px;
+  }
+
+  header button {
+    font-size: 1.3em;
+  }
+
+  header .btn button:nth-child(2) {
+    display: block;
+    font-size: 1.5em;
+  }
+
+  .container {
+    flex-direction: column-reverse;
+    column-gap: 0;
+  }
+
+  .container img {
+    width: 75%;
+  }
+
+  .container .content {
+    max-width: max-content;
+  }
+
+  .container .content h1 {
+    font-size: 2em;
+  }
+
+  .container .content h3 {
+    font-size: 14px;
+    padding-bottom: 5px;
+  }
+
+  .container .content p {
+    font-size: 13px;
+    line-height: 20px;
+  }
+
+  .container .groups-cards {
+    justify-content: space-evenly;
+    column-gap: 0;
+    padding-top: 1.5em;
+    gap: 2em 1em;
+    flex-wrap: wrap;
+  }
+
+  .container .groups-cards .cards {
+    flex: 1 1 auto;
+  }
+
+  .container .groups-cards .cards h2 {
+    font-size: 14px;
+  }
+
+  .container .groups-cards .cards p {
+    font-size: 13px;
+  }
+
+  .container .groups-cards .cards img {
+    width: 100px;
+  }
+
+  .made-with {
+    padding: 1em 0;
+  }
+
+  .made-with p {
+    font-size: 13px;
+    line-height: 18px;
+  }
+}
+
+@media screen and (min-width: 480px) and (max-width: 667px) {
+  body {
+    padding: 1em 1em 0;
+  }
+
+  header .logo i {
+    font-size: 1.3em;
+  }
+
+  header .logo h1 {
+    font-size: 26px;
+  }
+
+  header .btn button:nth-child(1) {
+    display: none;
+  }
+
+  header .menu-bar {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100vh;
+    display: none;
+    justify-content: center;
+    align-items: center;
+  }
+  header .menu-bar.active{
+    display: inherit;
+    background: var(--beige);
+  }
+  header .menu-bar .nav-links {
+    flex-direction: column;
+    gap: 2em 0;
+  }
+
+  header .menu-bar .nav-links li a {
+    font-size: 14px;
+  }
+
+  header button {
+    font-size: 1.3em;
+  }
+
+  header .btn button:nth-child(2) {
+    display: block;
+    font-size: 1.5em;
+  }
+
+  .container {
+    flex-direction: column-reverse;
+    column-gap: 0;
+  }
+
+  .container img {
+    width: 80%;
+  }
+
+  .container .content {
+    max-width: max-content;
+  }
+
+  .container .content h1 {
+    font-size: 2em;
+  }
+
+  .container .content h3 {
+    font-size: 13px;
+    padding-bottom: 5px;
+  }
+
+  .container .content p {
+    font-size: 13px;
+    line-height: 20px;
+  }
+
+  .container .groups-cards {
+    justify-content: space-evenly;
+    column-gap: 0;
+    padding-top: 1.5em;
+    gap: 2em 1em;
+    flex-wrap: wrap;
+  }
+
+  .container .groups-cards .cards {
+    flex: 1 1 auto;
+  }
+
+  .container .groups-cards .cards h2 {
+    font-size: 14px;
+  }
+
+  .container .groups-cards .cards p {
+    font-size: 12px;
+  }
+
+  .container .groups-cards .cards img {
+    width: 100px;
+  }
+
+  .made-with {
+    padding: 1em 0;
+  }
+
+  .made-with p {
+    font-size: 13px;
+  }
+}
+
+@media screen and (min-width: 677px) and (max-width: 768px) {
+  body {
+    padding: 1em 1em 0;
+  }
+
+  header .logo h1 {
+    font-size: 24px;
+  }
+
+  header .menu-bar .nav-links {
+    column-gap: 20px;
+  }
+
+  header .menu-bar .nav-links li a {
+    font-size: 14px;
+  }
+
+  header button {
+    font-size: 1.5em;
+  }
+
+  header .btn button:nth-child(1) {
+    padding: 8px 12px;
+    font-size: 13px;
+  }
+
+  .container {
+    flex-direction: column-reverse;
+  }
+
+  .container .content {
+    max-width: max-content;
+  }
+
+  .container .content h1 {
+    font-size: 2em;
+  }
+
+  .container .content h3 {
+    font-size: 18px;
+  }
+
+  .container .content p {
+    line-height: 20px;
+  }
+
+  .container .groups-cards {
+    column-gap: 1em;
+    padding-top: 2em;
+  }
+
+  .container .groups-cards .cards h2 {
+    font-size: 16px;
+  }
+
+  .container .groups-cards .cards p {
+    font-size: 13px;
+  }
+
+  .container img {
+    width: 80%;
+  }
+
+  .made-with {
+    padding: 1em;
+  }
+
+  .made-with p {
+    font-size: 13px;
+  }
+}
+
+
